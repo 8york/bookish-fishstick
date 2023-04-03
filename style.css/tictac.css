@@ -22,10 +22,14 @@ h1{
     
 }
 .cell {
-    width:80px;
-    height: 80px;
+    width:100px;
+    height: 100px;
     background-color: green;
     border-radius: 0.3em;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
 }
 
 .btn {
@@ -37,6 +41,17 @@ h1{
     width: 150px;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 2em;
-    
+    margin-top: 2em; 
+}
+
+.circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: solid 2px pink;
+    box-sizing: border-box;
+}
+
+.cross {
+    height:
 }
