@@ -1,0 +1,42 @@
+body{
+    margin: auto;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: violet;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 225px;
+    gap: 5px;
+    margin: 0 auto;
+    
+}
+.cell {
+    width:80px;
+    height: 80px;
+    background-color: green;
+    border-radius: 0.3em;
+}
+
+.btn {
+    padding: .3em;
+    font-size: 18px;
+    border-radius: 1em;
+    background-color: teal;
+    color: bisque;
+    width: 150px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2em;
+    
+}
