@@ -52,6 +52,14 @@ h1{
     box-sizing: border-box;
 }
 
-h2{
+#message {
     text-align: center;
+    font-size: 30px;
+}
+.winner {
+    color: pink;
+    font-weight: bold;
+}
+.winning {
+    background-color: aquamarine;
 }
