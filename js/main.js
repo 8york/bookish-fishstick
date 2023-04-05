@@ -4,9 +4,34 @@ $(document).ready(function () {
     X: [],
     O: [],
   };
+  let option = [];
+  let gameOn = true;
 
-  $(".cell").on("click", function () {
+  // $(".cell").on("click", function () {
+  //     $(this).text(currentPlayer);
+  //     currentPosition[currentPlayer].push(parseInt($(this).attr("data-index")));
+  //     if (currentPlayer === "X") {
+  //       currentPlayer = "O";
+  //       $("#message").html(`${currentPlayer}'s turn`);
+  //     } else if (currentPlayer === "O") {
+  //       currentPlayer = "X";
+  //       $("#message").html(`${currentPlayer}'s turn`);
+  //     }
+  //     // not working
+  //     // else if ($(".cell").length < 0) {
+  //     //   console.log($(".cell"));
+  //     //   $("#message").html(`It's a draw`).addClass("winner");
+  //     // }
+  //     winnerIs();
+  //   });
+
+  $(".cell").on("click", function (e) {
+    if((this).innerText.trim() !== ""){
+     return $("#message").html(`choose another cell`);
+    }
     $(this).text(currentPlayer);
+    const win = winnerIs(); 
+    // option.push(parseInt($(this).attr("data-index")));
     currentPosition[currentPlayer].push(parseInt($(this).attr("data-index")));
     if (currentPlayer === "X") {
       currentPlayer = "O";
@@ -14,12 +39,15 @@ $(document).ready(function () {
     } else if (currentPlayer === "O") {
       currentPlayer = "X";
       $("#message").html(`${currentPlayer}'s turn`);
-    } else if ($(".cell").length < 0) {
-      console.log($(".cell"));
-      $("#message").html(`It's a draw`).addClass("winner");
     }
-    winnerIs();
-  });
+    else if(win === true){
+      alert("gameover");
+    }
+        
+        winnerIs();    
+      });
+   
+
 
   const winningGrid = [
     [1, 2, 3],
@@ -32,6 +60,7 @@ $(document).ready(function () {
     [1, 5, 9],
   ];
 
+  //this works
   const winnerIs = function () {
     for (combination of winningGrid) {
       const [a, b, c] = combination;
@@ -42,7 +71,7 @@ $(document).ready(function () {
       ) {
         $("#message").html(`X wins`).addClass("winner");
         //not working
-        $(currentPosition.X).css("background-color", "violet");
+        // $(currentPosition.X).css("background-color", "violet");
       } else if (
         currentPosition.O.includes(a) &&
         currentPosition.O.includes(b) &&
@@ -50,6 +79,9 @@ $(document).ready(function () {
       ) {
         $("#message").html(`O wins`).addClass("winner");
       }
+      // else if(winnerIs === true){
+      //   return
+      // }
     }
   };
 
@@ -65,5 +97,6 @@ $(document).ready(function () {
 
   $("#btn").on("click", restart);
 
-  const winnningGridBgColor = function () {};
+  // const winnningGridBgColor = function () {};
+  // });
 });
