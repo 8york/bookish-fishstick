@@ -1,5 +1,9 @@
+/* font-family: 'Monoton', cursive; */
+/* font-family: 'Oswald', sans-seri; */
+
 body{
     margin: auto;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
 .board {
@@ -9,8 +13,10 @@ body{
 }
 h1{
     text-align: center;
-    font-size: 60px;
+    font-size: 75px;
     color: violet;
+    margin-bottom: 0px;
+    font-family: 'Monoton', cursive;
 }
 
 .grid-container{
@@ -19,17 +25,24 @@ h1{
     width: 225px;
     gap: 5px;
     margin: 0 auto;
+    transform: translateX(-20%);
     
 }
 .cell {
     width:100px;
     height: 100px;
-    background-color: green;
+    background-color: teal;
     border-radius: 0.3em;
     font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;;
+}
+
+
+.cell:hover{
+    position: relative;
+    bottom: 5px;
 }
 
 .btn {
@@ -41,20 +54,29 @@ h1{
     width: 150px;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 2em; 
+    margin-top: 2em;
+    font-family: 'Oswald', sans-seri;
 }
 
-.circle {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    border: solid 2px pink;
-    box-sizing: border-box;
+.x{
+    color: coral;
+    font-family: 'Oswald', sans-seri;
+    font-weight: 700;
+}
+
+.o{
+    color: rgb(54, 47, 255);
+    font-family: 'Oswald', sans-seri;
+    font-weight: 700;
 }
 
 #message {
     text-align: center;
-    font-size: 30px;
+    font-size: 80px;
+    font-family: 'Oswald', sans-seri;
+    font-weight: 700;
+    color: rgb(213, 86, 32);
+    margin: 0px;
 }
 .winner {
     color: pink;

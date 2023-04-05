@@ -24,11 +24,7 @@ $(document).ready(function () {
       currentPlayer = "X";
       $("#message").html(`${currentPlayer}'s turn`);
     }
-    //not working
-
     winnerIs();
-
-    //bug,message says draw all the time
   });
 
   const winningGrid = [
