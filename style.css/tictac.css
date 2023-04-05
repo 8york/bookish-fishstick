@@ -60,6 +60,10 @@ h1{
     font-weight: 700;
 }
 
+.btn:hover {
+    background-color: navy;
+}
+
 #message {
     text-align: center;
     font-size: 80px;
@@ -68,9 +72,22 @@ h1{
     color: rgb(213, 86, 32);
     margin: 0px;
 }
-.winner {
+
+@keyframes win {
+  from {
+    transform: translateY(-40px);
+  }
+
+  to {
+    transform: translateY(30px);
+    opacity:0;
+  }
+}
+
+  .winner {
     color: pink;
     font-weight: bold;
+    animation: win 2s;
 }
 
 .winnerCell {
