@@ -3,6 +3,9 @@
 This is a simple Tic Toc Toe Web application built for Project 0 in SEI-anz-seir64.
 This project was to employ the skills I have learnt in the first part of the course.
 To build this app, HTML, CSS, JavaScript and Jquery files have been used.
+To play this game follow this
+[link](https://8york.github.io/bookish-fishstick/)
+
 
 ## GAME DESCRIPTION
 * This is a two-player game, in this case two people on one divice.
@@ -24,5 +27,4 @@ To build this app, HTML, CSS, JavaScript and Jquery files have been used.
 If the game was interesting and the players want to play again, click the Play Again button at the bottom to refresh the board.
 
 
-
-
+> This project was possible with the help from instructor teams.
