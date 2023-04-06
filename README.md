@@ -27,4 +27,4 @@ To play this game follow this
 If the game was interesting and the players want to play again, click the Play Again button at the bottom to refresh the board.
 
 
-> This project was possible with the help from instructor teams.
+> This project was made possible with the help from instructor teams at GA.
