@@ -66,7 +66,7 @@ $(document).ready(function () {
         $(".cell").filter(`[data-index=${b}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${c}]`).addClass("winnerCell");
       } 
-      //this shows game is a draw
+      //this shows the game is a draw
       else if (currentPosition.O.length + currentPosition.X.length === 9) {
         $("#message").html(`It's a draw`);
         gameOver = true;

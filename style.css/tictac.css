@@ -47,7 +47,7 @@ h1{
     padding:.4em;
     font-size: 30px;
     border-radius: 50%;
-    background-color: rgb(26, 233, 60);
+    background-color: rgb(7, 7, 180);
     border: solid 1px rgb(26, 233, 60);
     color: rgb(214, 162, 95);
     width: 150px;
@@ -58,7 +58,7 @@ h1{
 }
 
 .btn:hover {
-    background-color: navy;
+    background-color: rgb(26, 233, 60);
 }
 
 #message {
