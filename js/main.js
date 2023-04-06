@@ -5,18 +5,21 @@ $(document).ready(function () {
     O: [],
   };
   let gameOver = false;
-  // let gameOn = true;
-  // let winner = "X";
 
-  $(".cell").on("click", function (e) {
+  $(".cell").on("click", function () {
+    //this will stop the game when there is a winner
     if (gameOver) {
       return;
     }
+    //this disables to choose the same cell
     if (this.innerText.trim() !== "") {
       return $("#message").html(`choose another cell`);
     }
+    //text in the cell that is been clicked is the currentplayer x or o
     $(this).text(currentPlayer);
+    //put the data-index number into the array of the current position of the player
     currentPosition[currentPlayer].push(parseInt($(this).attr("data-index")));
+    //how turns are taken
     if (currentPlayer === "X") {
       currentPlayer = "O";
       $("#message").html(`${currentPlayer}'s turn`);
@@ -38,7 +41,6 @@ $(document).ready(function () {
     [1, 5, 9],
   ];
 
-  //this works
   const winnerIs = function () {
     for (combination of winningGrid) {
       const [a, b, c] = combination;
@@ -49,6 +51,7 @@ $(document).ready(function () {
       ) {
         $("#message").html(`X wins`).addClass("winner");
         gameOver = true;
+        //filter out the data-index number that is part of the winning rows then add class 
         $(".cell").filter(`[data-index=${a}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${b}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${c}]`).addClass("winnerCell");
@@ -62,7 +65,9 @@ $(document).ready(function () {
         $(".cell").filter(`[data-index=${a}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${b}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${c}]`).addClass("winnerCell");
-      } else if (currentPosition.O.length + currentPosition.X.length === 9) {
+      } 
+      //this shows game is a draw
+      else if (currentPosition.O.length + currentPosition.X.length === 9) {
         $("#message").html(`It's a draw`);
         gameOver = true;
       }
