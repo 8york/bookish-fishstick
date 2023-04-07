@@ -17,6 +17,27 @@ h1{
     font-family: 'Monoton', cursive;
 }
 
+.counter-container{
+    display: flex;
+    justify-content: center;
+    gap:2em;
+}
+
+p{
+    font-family: 'Oswald', sans-seri;
+    color:rgb(213, 86, 32);
+    font-size:2.8em;
+    font-weight: 700;
+    margin:0;
+}
+
+#x-point, #o-point{
+    color:ghostwhite;
+    font-family: 'Oswald', sans-seri;
+    font-size:2.8em;
+    font-weight: 700;
+    
+}
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -34,9 +55,9 @@ h1{
     font-size: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    cursor: pointer;
 }
-
 
 .cell:hover{
     position: relative;
@@ -55,6 +76,7 @@ h1{
     transform: translateX(-50%);
     font-family: 'Oswald', sans-seri;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .btn:hover {

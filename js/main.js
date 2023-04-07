@@ -40,7 +40,8 @@ $(document).ready(function () {
     [3, 5, 7],
     [1, 5, 9],
   ];
-
+  let countX = 0;
+  let countO = 0;
   const winnerIs = function () {
     for (combination of winningGrid) {
       const [a, b, c] = combination;
@@ -55,6 +56,8 @@ $(document).ready(function () {
         $(".cell").filter(`[data-index=${a}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${b}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${c}]`).addClass("winnerCell");
+        countX += 1
+        $('#x-point').text(`${countX}`);
       } else if (
         currentPosition.O.includes(a) &&
         currentPosition.O.includes(b) &&
@@ -65,6 +68,8 @@ $(document).ready(function () {
         $(".cell").filter(`[data-index=${a}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${b}]`).addClass("winnerCell");
         $(".cell").filter(`[data-index=${c}]`).addClass("winnerCell");
+        countO += 1;
+        $('#o-point').text(`${countO}`);
       } 
       //this shows the game is a draw
       else if (currentPosition.O.length + currentPosition.X.length === 9) {
