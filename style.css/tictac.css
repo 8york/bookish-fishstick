@@ -53,9 +53,9 @@ input{
     width: 225px;
     gap: 5px;
     margin: 0 auto;
-    transform: translateX(-20%);
-    
+    transform: translateX(-20%);   
 }
+
 .cell {
     width:100px;
     height: 100px;
@@ -73,6 +73,13 @@ input{
     bottom: 5px;
 }
 
+.player-one{
+    color:rgb(212, 88, 109);
+}
+
+.player-two{
+    color: rgb(51, 33, 127);
+}
 .btn {
     padding:.4em;
     font-size: 30px;
@@ -112,7 +119,7 @@ input{
   }
 }
 
-  .winner {
+.winner {
     color: pink;
     font-weight: bold;
     animation: win 2s;
