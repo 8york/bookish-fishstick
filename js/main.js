@@ -7,28 +7,30 @@ $(document).ready(function () {
       },
       currentPlayer: "X",
       gameOver: false,
-      countX: 0,
-      countO: 0,
+      
     };
   };
+  let data = initialData();
+  let firstPlayerInitial = "X";
+  let secondPlayerInitial = "O";
+  let whoseMove = $("#message").html(`Game On`);
+  countX = 0;
+  countO = 0;
+  let playerOneCell = undefined;
+  let playerTwoCell = undefined;
 
   // getting the first letter of the first player
   $("#player-one").on("keyup", function () {
     let playerOne = $(this).val();
     firstPlayerInitial = playerOne[0];
+    // override existing cells with new initial
   });
 
   $("#player-two").on("keyup", function () {
     let playerTwo = $(this).val();
     secondPlayerInitial = playerTwo[0];
+    // override existing cells with new initial
   });
-
-  let data = initialData();
-  let firstPlayerInitial = "X";
-  let secondPlayerInitial = "O";
-  let whoseMove = $("#message").html(`Game On`);
-  let playerOneCell = undefined;
-  let playerTwoCell = undefined;
 
   $(".cell").on("click", function () {
     //this will stop the game when there is a winner
@@ -81,12 +83,12 @@ $(document).ready(function () {
 
     if (winner === "X") {
       $("#message").html(`${firstPlayerInitial} wins`).addClass("winner");
-      data.countX += 1;
-      $("#x-point").text(`${data.countX}`);
+      countX += 1;
+      $("#x-point").text(`${countX}`);
     } else {
       $("#message").html(`${secondPlayerInitial} wins`).addClass("winner");
-      data.countO += 1;
-      $("#o-point").text(`${data.countO}`);
+      countO += 1;
+      $("#o-point").text(`${countO}`);
     }
   };
 
