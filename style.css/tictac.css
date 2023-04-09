@@ -20,21 +20,30 @@ h1{
 .counter-container{
     display: flex;
     justify-content: center;
-    gap:2em;
+    gap:1em;
+    margin-bottom: 1.5em;
+    align-items:end;
 }
 
 p{
     font-family: 'Oswald', sans-seri;
     color:rgb(213, 86, 32);
-    font-size:2.8em;
+    font-size:2em;
     font-weight: 700;
     margin:0;
+}
+
+input{
+    border-radius:0.3em;
+    font-size:1.5em;
+    font-weight: 700;
+    font-family: 'Oswald', sans-seri;
 }
 
 #x-point, #o-point{
     color:ghostwhite;
     font-family: 'Oswald', sans-seri;
-    font-size:2.8em;
+    font-size: 3em;
     font-weight: 700;
     
 }
@@ -44,9 +53,9 @@ p{
     width: 225px;
     gap: 5px;
     margin: 0 auto;
-    transform: translateX(-20%);
-    
+    transform: translateX(-20%);   
 }
+
 .cell {
     width:100px;
     height: 100px;
@@ -64,6 +73,13 @@ p{
     bottom: 5px;
 }
 
+.player-one{
+    color:rgb(212, 88, 109);
+}
+
+.player-two{
+    color: rgb(51, 33, 127);
+}
 .btn {
     padding:.4em;
     font-size: 30px;
@@ -103,7 +119,7 @@ p{
   }
 }
 
-  .winner {
+.winner {
     color: pink;
     font-weight: bold;
     animation: win 2s;

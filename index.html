@@ -14,15 +14,17 @@
 </head>
  <body>
     <div class="board" id="borad-container">
-        <h1> TIC TOC TOE</h1>
+        <h1> TIC TAC TOE</h1>
         
         <div class="counter-container">
             <!-- <div class="counter-one"> -->
-                <p>X:</p>
+                <p>PLAYER 1</p>
+                <input type="text" id="player-one">
                 <div id="x-point">0</div>
             <!-- </div> -->
             <!-- <div class="counter-two"> -->
-                <p>O:</p>
+                <p>PLAYER 2</p>
+                <input type="text" id="player-two">
                 <div id="o-point">0</div>
             <!-- </div> -->
         </div>
@@ -37,7 +39,7 @@
             <div class="cell" data-index ="8"></div>
             <div class="cell" data-index ="9"></div>
         </div>
-        <h2 id="message">X's turn</h2>
+        <h2 id="message"></h2>
         <button class="btn" id="btn">Play Again</button>        
     </div>
  </body>
